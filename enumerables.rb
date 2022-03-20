@@ -32,7 +32,7 @@ end
 # "hello" * 3 == "hellohellohello"
 def print_spicy_foods(spicy_foods)
   spicy_foods.each do |food|
-    puts food "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{'🌶' * food[:heat_level]}"
+    puts "#{food[:name]} (#{food[:cuisine]}) | Heat Level: #{'🌶' * food[:heat_level]}"
   end
 end
 
@@ -57,7 +57,8 @@ end
 # Buffalo Wings (American) | Heat Level: 🌶🌶🌶
 # HINT: Try to use methods you've already written to solve this!
 def print_spiciest_foods(spicy_foods)
-  
+  spiciest = spiciest_foods(spicy_foods)
+  print_spicy_foods(spiciest)
 end
 
 # given an array of spicy foods, return an integer representing 
@@ -69,3 +70,4 @@ def average_heat_level(spicy_foods)
   end
   total_heat_level / spicy_foods.length
 end
+
